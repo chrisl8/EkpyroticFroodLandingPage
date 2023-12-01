@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Multiverse</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mcspace.css">
+<link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+<div id="pagecontent">
+<header>
+<h1>Minecraft In Space</h1>
+<h2>Multiverse</h2>
+</header>
+<div id="leftnavbar">
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="server.html">Server Setup</a></li>
+<li><a href="client.html">Minecraft Setup</a></li>
+<li><a href="creation.html">World Creation</a></li>
+<li><a href="editor.html">World Editor</a></li>
+<li><a href="frontier.html">A New Frontier</a></li>
+<li><a href="worldedit.html">WorldEdit</a></li>
+<li><a href="movecraft.html">Movecraft</a></li>
+<li><a href="multiverse.html">Multiverse</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+</div>
+<div id="rightcontentcolumn">
+<p>Multiverse lets you create and move between multiple worlds in Minecraft with the Bukkit server. You can run <code>/mv tp [worldname]</code> to go to any world, but it can be more interesting to create "doors" or portals from one world to another. One idea with a space world is to associate "planets" with worlds by building a portal into the planet that takes you to the world it represents.</p>
+<h3>Behind Door Number 1</h3>
+<p>Make a little hole into the side of your planet.</p>
+<img src="images/multiverse1.png" alt="A door in the planet">
+<p>Use your wooden pick axe to select the upper left side of the door as the first position, and the lower right side of the door as the second position.</p>
+<img src="images/multiverse2.png" class="leftsideimage" alt="First position selection on blue planet">
+<img src="images/multiverse3.png" class="rightsideimage" alt="Second position selection on blue planet">
+<br class="clearfloats">
+<p>Then run this command:</p>
+<p><code>/mvp create blueplanet</code></p>
+<p>Now type <code>/spawn</code> to go back to the original world. Fly around and find a spot to make a "portal". Build a simple arch with any material. Here I've built an iron arch in a sandy area.</p>
+<p>Use your wooden pick axe to select the upper left corner of the arch as the first position, and the lower right side of the arch as the second position.</p>
+<img src="images/multiverse4.jpg" class="leftsideimage" alt="First position selection on Arch">
+<img src="images/multiverse5.jpg" class="rightsideimage" alt="Second position selection on Arch">
+<br class="clearfloats">
+<p>Now run these commands to create the second portal and to connect them:</p>
+<img src="images/multiverse6.jpg" class="rightimage" alt="Space portal arch">
+<ul>
+<li><code>/mvp create homedoor</code></li>
+<li><code>/mvp modify dest p:blueplanet</code></li>
+<li><code>/mvp select blueplanet</code></li>
+<li><code>/mvp modify dest p:homedoor</code></li>
+</ul>
+<p>If you make any mistakes it will tell you. :)</p>
+<br class="clearfloats">
+<p>Now if you walk through the arch you will be transported to the doorway in the blue planet, and if you walk into the doorway in the blue planet, you will be transported to the arch.</p>
+<img src="images/multiverse7.png" class="leftsideimage" alt="Blue Planet doorway">
+<img src="images/multiverse8.jpg" class="rightsideimage" alt="Arch">
+<br class="clearfloats">
+<p class="lastline">Finally please take a look at my <a href="gallery.html">Gallery</a> -></p>
+</div>
+<footer>Copyright &copy; 2013<br>
+All screen shots were created with <a href="https://minecraft.net/">Minecraft</a> using the <a href="http://www.planetminecraft.com/texture_pack/misas-realistic-texture-pack/">Misa's Texture Pack</a>.
+</footer>
+</div>
+</body>
+</html>

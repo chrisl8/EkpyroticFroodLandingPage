@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Server setup with Plugins!</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mcspace.css">
+<link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+<div id="pagecontent">
+<header>
+<h1>Minecraft In Space</h1>
+<h2>Server setup with Plugins!</h2>
+</header>
+<div id="leftnavbar">
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="server.html">Server Setup</a></li>
+<li><a href="client.html">Minecraft Setup</a></li>
+<li><a href="creation.html">World Creation</a></li>
+<li><a href="editor.html">World Editor</a></li>
+<li><a href="frontier.html">A New Frontier</a></li>
+<li><a href="worldedit.html">WorldEdit</a></li>
+<li><a href="movecraft.html">Movecraft</a></li>
+<li><a href="multiverse.html">Multiverse</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+</div>
+<div id="rightcontentcolumn">
+<p>Minecraft is a game that you can download and play by yourself and you can also have friends join your game. However, to do many advanced things you need to run a server and connect to to it. We will be using the <a href="http://bukkit.org/">Bukkit</a> server. This is an alternate server that has the ability to use plugins.</p>
+<p>This isn't a complete tutorial for someone who has never set up a server before. It is for people who have a little bit of server experience, however, if you go to all of the links and read, you can learn how to set up a server. So, maybe it is a complete "guide".</p>
+<a href="images/deathstarconstruction.png"><img src="images/deathstarconstruction.jpg" class="rightimage" alt="Scene from Minecraft"></a>
+<h3>Basic Server Setup</h3>
+<p>Make sure you have Java Installed:<br>
+If you do not, then go to <a href="http://java.com/en/download/manual.jsp">http://java.com/en/download/manual.jsp</a> and download both the Windows Offline (32-bit) and Windows Offline (64-bit) file and install both of them.</p>
+<p>Go to <a href="http://wiki.bukkit.org/Setting_up_a_server">http://wiki.bukkit.org/Setting_up_a_server</a> and follow the instructions to set up your server. Use the current "Recommended Build".</p>
+<p>The first time you run the server it will generate all of the needed folders and config files. Then you can stop it and add plugins and make config changes.</p>
+<h3>Required Plugins</h3>
+<p>Download and install the following plugins:</p>
+<dl>
+  <dt><a href="http://dev.bukkit.org/server-mods/essentials/">Essentials</a></dt>
+    <dd>Essentials gives you a host of useful commands for working inside of the server. There are other plugins to do this too, but this is the one I use.</dd>
+  <dt><a href="http://dev.bukkit.org/server-mods/worldedit/">WorldEdit</a></dt>
+    <dd>WorldEdit allows you to cut and paste things in Minecraft as well as to quickly generate large structures like boxes and spheres.</dd>
+  <dt><a href="http://dev.bukkit.org/bukkit-mods/movecraft/">MoveCraft</a></dt>
+    <dd>MoveCraft allows you to "move" structures as if they were vehicles. This is how we can make rudimentary "space ships."</dd>
+  <dt><a href="http://dev.bukkit.org/server-mods/multiverse-core/">Multiverse Core</a> - Note that you may need to go to "Dev Builds" and get the latest dev build if the version here is old.</dt>
+    <dd>Multiverse is a plugin that allows you to use multiple "worlds" within the same Minecraft server.</dd>
+  <dt><a href="http://dev.bukkit.org/bukkit-mods/multiverse-portals/">Multiverse Portals</a> - Note that you may need to go to "Dev Builds" and get the latest dev build if the version here is old.</dt>
+    <dd>The "Portals" plugin is an extention to Multiverse that lets you build gateways from one world to another.</dd>
+  <dt><a href="http://dev.bukkit.org/bukkit-mods/worldborder/">WorldBorder</a></dt>
+    <dd>WorldBorder lets you limit the size of your world by keeping players in a set area. This is important for "space" because otherwise they will eventually be able to wander past the area that is clear.</dd>
+  <dt><a href="http://dev.bukkit.org/bukkit-mods/timelock/">TimeLock</a></dt>
+    <dd>TimeLock will allow you to make it perpetually "night" in your space world. Otherwise it just looks funny with the sun out and blue sky.</dd>
+</dl>
+<h3>Optional Plugins</h3>
+<p> These plugins will enhance the experience, but are not required ot make the space world work:</p>
+<dl>
+  <dt><a href="http://dev.bukkit.org/server-mods/dynmap/">Dynmap</a></dt>
+    <dd>Dynmap will make a map of your world for you. It certainly isn't required, but it is fun.</dd>
+  <dt><a href="http://forums.bukkit.org/threads/misc-info-dynmap-essentials-v0-40-show-essentials-warps-and-homes-on-dynmap-1-4-5-r1-0.51672/">Dynmap Essentials</a></dt>
+    <dd>Dynmap Essentials will cause elements from the Essentials, such as warps, to show up on your map.</dd>
+  <dt><a href="http://dev.bukkit.org/server-mods/deathcontrol/">DeathControl</a></dt>
+    <dd>Space is dangerous, because there is no "floor". If you walk off of something or stop flying by accident and fall too far, you will die. This can cause you to lose all of your inventory items. DeathControl will give them back to you. Very helpful if you had something irreplaceable like a book.</dd>
+</dl>
+<h3>Server Configuration</h3>
+<p>After putting all of the plugins you downloaded into the "plugins" folder under the server .jar file location (NOTE: If you downloaded a .zip file, unzip it and put the contents there) you need to run the server once. All of the plugins will complain about lacking config files and then generate default ones. Then stop the server again so that we can make changes to the default config.</p>
+<p>In the folder where your craftbukkit jar file go into "plugins\Movecraft\types" and create a new empty text file called "spaceship.craft". Make sure the extension is .craft and not .txt and put this text into it:</p>
+<p><code>name: Spaceship<br>
+maxSize: 10000000<br>
+minSize: 10<br>
+allowedBlocks: <br>
+    - 1<br>
+    - 68<br>
+    - 63<br>
+    - 20<br>
+    - 323<br>
+<br>
+forbiddenBlocks:<br>
+    - 12<br>
+<br>
+canFly: true<br>
+speed: 20.0<br>
+tryNudge: false<br>
+flyblocks:<br>
+    20:<br>
+        - 0.0<br>
+        - 100.0</code></p>
+<p>Save and close that file.</p>
+<p class="lastline">Now it is time to move on to <a href="client.html">Minecraft Client Setup</a> -></p>
+</div>
+<footer>Copyright &copy; 2013<br>
+All screen shots were created with <a href="https://minecraft.net/">Minecraft</a> using the <a href="http://www.planetminecraft.com/texture_pack/misas-realistic-texture-pack/">Misa's Texture Pack</a>.
+</footer>
+</div>
+</body>
+</html>

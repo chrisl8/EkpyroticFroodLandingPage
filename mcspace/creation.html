@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>World Creation</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mcspace.css">
+<link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+<div id="pagecontent">
+<header>
+<h1>Minecraft In Space</h1>
+<h2>World Creation</h2>
+</header>
+<div id="leftnavbar">
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="server.html">Server Setup</a></li>
+<li><a href="client.html">Minecraft Setup</a></li>
+<li><a href="creation.html">World Creation</a></li>
+<li><a href="editor.html">World Editor</a></li>
+<li><a href="frontier.html">A New Frontier</a></li>
+<li><a href="worldedit.html">WorldEdit</a></li>
+<li><a href="movecraft.html">Movecraft</a></li>
+<li><a href="multiverse.html">Multiverse</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+</div>
+<div id="rightcontentcolumn">
+<a href="images/keyhole.png"><img src="images/keyhole.jpg" class="rightimage" alt="Scene from Minecraft"></a>
+<h3>Some Preliminaries</h3>
+<p>Run the Bukkit server, and start your Minecraft client now.</p>
+<p>In Minecraft under Multiplayer click on Add Server and put in the IP address under "Server Address". If you are running the server on your own computer the address will be 127.0.0.1.<br>
+The Server Name doesn't matter. It can be anything. Then click on Done.<br>
+Click on the server name and click on "Join Server".</p>
+<p>You will be thrust into a brand new standard Minecraft world. The first thing to do is probably to make some basic changes to make it "safe". Otherwise it will soon get dark and some monster will come and kill you.</p>
+<p>First, while Minecraft is still running (hit ESC to get keyboard control if you need to) go back to the black "cmd.exe" window where the server is running.<br>
+You should see something like this:</p>
+<p><samp>11:47:54 [INFO] PlayerName[/127.0.0.1:61394] logged in with entity id 2504 at ([world] -61.5, 59.0, 248.5)</samp></p>
+<p>Click in the window and type this to make yourself an "Operator" which is a sort of super user who can run any command:</p>
+<p><samp>op PlayerName</samp></p>
+<p>Where "PlayerName" is your player's actual Minecraft name, as seen in the "INFO" line above.</p>
+<figure>
+ <img src="images/initialview.jpg" width="504" height="345" alt="Minecraft in Survival Mode">
+ <figcaption>Minecraft in "Survival" Mode</figcaption>
+</figure>
+<p>Now you are done in the server window. You may notice later that this window gives lots of interesting information, including listing every command you run from the game.</p>
+<p>Go back to the Minecraft game and type this to make yourself safe:</p>
+<p><code>/creative</code></p>
+<p>You should notice your health bar and hunger level bars disappear. You can't die now except if you fall out of the world.<br>
+Also notice how the "/" character puts you into a typing box and you can send commands to the server. You will use this a lot.</p>
+<p>Also, if you are underground, which sometimes happens for some reason, you can get out by typing <code>/top</code>. This will take you to the highest solid surface of the world where you are at.</p>
+<h3>Set things up</h3>
+<p>Now run these commands one at a time from the Minecraft game window.</p>
+<ul>
+  <li><code>/mvm set mode creative</code></li>
+  <li><code>/mvm set diff 0</code></li>
+  <li><code>/mv create space NORMAL -t FLAT</code></li>
+  <li><code>/mvm set mode creative space</code></li>
+  <li><code>/mvm set diff 0 space</code></li>
+  <li><code>/mvm set weather false space</code></li>
+  <li><code>/mvm set animals false space</code></li>
+  <li><code>/mv tp space</code></li>
+  <li><code>/tl 15000</code></li>
+  <li><code>/tl refresh 200</code></li>
+  <li><code>/wb shape square</code></li>
+  <li><code>/wb dynmap on</code></li>
+  <li><code>/wb set 1000</code></li>
+  <li><code>/wb wrap on</code></li>
+  <li><code>/wb fill</code></li>
+</ul>
+<figure>
+ <a href="images/fill.jpg"><img src="images/fill.jpg" width="320" height="200" alt="Fill operation in progress"></a>
+ <figcaption>Fill operation in progress</figcaption>
+</figure>
+<p>Now you need to wait for the [Fill] process to finish.</p>
+<p>While you are waiting you can point your web browser at <samp>http://127.0.0.1:8123/</samp> to see Dynmap's map of the Minecraft world. When it opens, use the pop out menu bar on the right to find your space world and take a look. The red world border should be visible, and the green flat land should be there growing. You will also see villages. These pop up automatically.</p>
+<p>WorldBorder will tell you when the [Fill] process is done with the line:</p>
+<p><samp>[Fill] task successfully completed!</samp></p>
+<p><em>If you left and came back to a Minecraft screen with no messages on it press <code>t</code> to see messages that have disappeared off of the screen.</em></p>
+<div class="container">
+<a href="images/dynmapfreshfill.jpg"><img src="images/dynmapfreshfill.jpg" class="leftimage" alt="Dynmap of Freshly filled map"></a>
+<p>If you look at Dynmap now it should look something like the image on the left.</p>
+<p>The red line is the border. Players will not be able to go past this, but instead will wrap to the other side of the map when they pass it.</p>
+<p>WorldBorder has filled in the map with flat area, including a buffer around the border so that Minecraft won't create new map out there when players get near it.</p>
+<p>There are also villages scattered about. These are auto generated by Minecraft and I am not aware of a way to prevent them. We will delete them later.</p>
+<p>Type <code>/spawn</code> to return to the initial world, so you aren't in "space" anymore.</p>
+<p>Now you can Disconnect, Quit Minecraft and run <code>stop</code> on the server to shut it down.</p>
+</div>
+<p class="lastline">We are ready to use the <a href="editor.html">World Editor</a> -></p>
+</div>
+<footer>Copyright &copy; 2013<br>
+All screen shots were created with <a href="https://minecraft.net/">Minecraft</a> using the <a href="http://www.planetminecraft.com/texture_pack/misas-realistic-texture-pack/">Misa's Texture Pack</a>.
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WorldEdit</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mcspace.css">
+<link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+<div id="pagecontent">
+<header>
+<h1>Minecraft In Space</h1>
+<h2>WorldEdit</h2>
+</header>
+<div id="leftnavbar">
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="server.html">Server Setup</a></li>
+<li><a href="client.html">Minecraft Setup</a></li>
+<li><a href="creation.html">World Creation</a></li>
+<li><a href="editor.html">World Editor</a></li>
+<li><a href="frontier.html">A New Frontier</a></li>
+<li><a href="worldedit.html">WorldEdit</a></li>
+<li><a href="movecraft.html">Movecraft</a></li>
+<li><a href="multiverse.html">Multiverse</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+</div>
+<div id="rightcontentcolumn">
+<p>Minecraft is about building things with blocks. If you do a lot of building though you can find certain tasks tedious. It becomes like using a typewriter. Making letters is fast, but working with more than one letter is not. You wish you could do things like quickly fill or delete large spaces, quickly create simple shapes, and the holy grail of word processing, Cut and Paste!</p>
+<p>That is exactly what WorldEdit does for you.</p>
+<p>WorldEdit has a vast array of commands and their own tutorial at the <a href="http://wiki.sk89q.com/wiki/WorldEdit">WorldEdit Wiki</a>. I am just going to try to cover the basics here in a simple way.</p>
+<div class="container">
+<img src="images/worldedit1.png" class="leftimage" alt="Information Display">
+<h3>Bearings</h3>
+<p>First it might help to have some data to help us get our bearings in the vast emptiness of space. Press the <strong>F3</strong> key on your keyboard to bring up a field of data over your screen. It isn't very pretty, but it can help while you are getting started in the dark.</p>
+<p>The three lines <code>x, y and z</code> show your three dimensional position. Use these to get an idea of which way you are going and where you are in relation to where you were before.</p>
+<p>The <code>f</code> line tells you which way you are facing. This is very helpful in turning when you have no frame of reference. Otherwise it is easy to go in circles by accident.</p>
+</div>
+<div class="container">
+<img src="images/worldedit15.jpg" class="rightimage" alt="Space Station">
+<h3>Getting Started</h3>
+<p>There are two ways to "select" an area to work with in WorldEdit. One based on your location and one based on your tool's currently highlighted block. The tool method is more precise, but we'll start with the position method, since we've got nothing to focus our tools on yet.</p>
+<p><em>Note that WorldEdit commands always use <strong>two</strong> forward slashes instead of one, like this: <code>//</code>. This helps separate WorldEdit commands from others.</em></p>
+<p>Move forward a little bit, and then type:</p>
+<p><code>//pos1</code></p>
+<p>Now turn around, go back a little ways, and also down just a little bit, and type this:</p>
+<p><code>//pos2</code></p>
+<p>Now type:</p>
+<p><code>//set iron</code></p>
+<p>You will probably be shoved over a little bit, and if you turn around you will see an iron block! You have just selected a section of space, and "filled" it with iron. You can use any block you want. If you want to clear a space use <code>//set 0</code>. If you cannot figure out the name of a block, you can use the block's ID number, which you can get from a <a href="http://minecraft-ids.grahamedgecombe.com/">Minecraft ID List</a> site. There is a number for every block, and you can use those instead of the names.</p>
+<p>Once your position is set, you can use the same selection to refill with anything,</p>
+<p><code>//set obsidian</code></p>
+<p>For a little "Space Odyssey" feel</p>
+<p>Finally, no matter what you've done, you can always undo it with:</p>
+<p><code>//undo</code></p>
+<p>Even if you've just accidentally created an amazing mess, just use undo to put it back the way it was. Only vary rarely will this leave any artifacts of your mistake.</p>
+</div>
+<div class="container">
+<img src="images/worldedit5.png" class="rightimage" alt="Selecting position 1">
+<h3>Basic Selection</h3>
+<p>Descend back down onto your block.</p>
+<p>If you undid it, changed it to 0 or obsidian, just make it iron again with <code>//set iron</code>.</p>
+<p>Iron is nice and bright in the night sky, and gives a feeling of solidity. :)</p>
+<p>Select a wooden ax from your inventory and hold it in your hand.</p>
+<p>Left click on the corner block of your box as if you are going to mine it. It should not mine it, though it may look like it is. It should instead tell you that "First position set" with the coordinates of that block.</p>
+</div>
+<div class="container">
+<img src="images/worldedit6.png" class="leftimage" alt="Selecting position 2">
+<p>Now go to the opposite corner of the block, and build a few block on it. Then get your wooden ax in your hand and right click on it. It should tell you that the "Second position set" with the coordinates of that block.</p>
+<p>Now you know how to select a section with tools based on blocks.</p>
+</div>
+<div class="container">
+<img src="images/worldedit7.jpg" class="rightimage" alt="Instant walls">
+<h3>Basic Building</h3>
+<p>Let's make some walls here, so type:</p>
+<p><code>//walls iron</code></p>
+<p>Instant walls! Unlike the "set" command which fills the space, walls just makes an empty shell on all four sides.</p>
+</div>
+<div class="container">
+<h3>More Building</h3>
+<p>To make a roof just select the two top corner blocks as your positions and type <code>//set glass</code>:</p>
+<img src="images/worldedit8.png" class="leftsideimage" alt="Selecting position 1">
+<img src="images/worldedit9.png" class="rightsideimage" alt="Selecting position 2">
+<img src="images/worldedit10.png" class="leftsideimage" alt="Typing set glass">
+<img src="images/worldedit11.jpg" class="rightsideimage" alt="Glass roof">
+</div>
+<div class="container">
+<img src="images/worldedit12.jpg" class="rightimage" alt="Blue Planet">
+<h3>Planets</h3>
+<p>Finally the fun part, planets!</p>
+<p>Fly up into the sky a ways, go anywhere really, and type:</p>
+<p><code>//sphere wool:blue 10<br>/top</code></p>
+<p>Now fly up and off and look back at your planet! Fly down and look up at it to see it against the stars! The number on the end of the command is the size. Use different numbers to make smaller or larger spheres. You can also use <code>//hspere</code> to make hollow spheres instead of filled ones.</p>
+<p><em>Caution! Making spheres is hard on the server. I usually don't make them any larger than 15 or 20. If you starting making 30, 35 or 40 size spheres you will probably crash your server and lose your progress.</em></p>
+</div>
+<div class="container">
+<img src="images/worldedit13.jpg" class="leftimage" alt="Blue with star background">
+<h3>Get creative</h3>
+<p>With these commands you should be able to build anything you want in space, including populating your galaxy with planets.<p>
+</div>
+<h3>Command Reference</h3>
+<p>While you can find a complete command reference at the <a href="http://wiki.sk89q.com/wiki/WorldEdit">WorldEdit Wiki</a> here are the ones we used, plus a few other often used along with the movement commands you may find you need while using WorldEdit:</p>
+<table border="1">
+  <tr>
+    <th id="command">Command</th>
+    <th id="description">Description</th>
+    <th id="notes">Notes</th>
+  </tr>
+  <tr>
+    <td headers="command">//pos<strong>#</strong></td>
+    <td headers="description" class="text">Set the selection points.</td>
+    <td headers="notes">Replace "#" with 1 or 2 for first and second position.</td>
+  <tr>
+    <td headers="command">//set <code>[item]</code></td>
+    <td headers="description" class="text">Fill the selected area with item.</td>
+    <td headers="notes">Use name or number.</td>
+  </tr>
+  <tr>
+    <td headers="command">//walls <code>[item]</code></td>
+    <td headers="description" class="text">Create walls on four sides of the selected area with item.</td>
+    <td headers="notes">Use name or number for item.</td>
+  </tr>
+  <tr>
+    <td headers="command">//sphere <code>[item] [size]</code></td>
+    <td headers="description" class="text">Create a filled sphere centered on your location.</td>
+    <td headers="notes">Use name or number for item. Use a number for the size.</td>
+  </tr>
+  <tr>
+    <td headers="command">//hsphere <code>[item] [size]</code></td>
+    <td headers="description" class="text">Create a filled sphere centered on your location.</td>
+    <td headers="notes">Use name or number for item. Use a number for the size.</td>
+  </tr>
+  <tr>
+    <td headers="command">//copy</td>
+    <td headers="description" class="text">Copy the selected area.</td>
+    <td headers="notes"></td>
+  </tr>
+  <tr>
+    <td headers="command">//cut</td>
+    <td headers="description" class="text">Copy the selected area.</td>
+    <td headers="notes">Leaves the area empty.</td>
+  </tr>
+  <tr>
+    <td headers="command">//paste</td>
+    <td headers="description" class="text">Paste what you copied or cut to the world.</td>
+    <td headers="notes">The paste location is based on your position.</td>
+  </tr>
+  <tr>
+    <td headers="command">//undo</td>
+    <td headers="description" class="text">Undo the last operation.</td>
+    <td headers="notes">N/A</td>
+  </tr>
+  <tr>
+    <td headers="command">/top</td>
+    <td headers="description" class="text">Move yourself to the highest solid block (not air) in the world at your position.</td>
+    <td headers="notes">Use this after making a sphere. Also use it if you get lost in a cave.</td>
+  </tr>
+  <tr>
+    <td headers="command">/descend</td>
+    <td headers="description" class="text">Move yourself down to the next empty space in the world large enough to fit in.</td>
+    <td headers="notes">Drop through the roof or explore for caves.</td>
+  </tr>
+  <tr>
+    <td headers="command">/ascend</td>
+    <td headers="description" class="text">Move yourself up to the next empty space in the world large enough to fit in.</td>
+    <td headers="notes">Like an elevator!</td>
+  </tr>
+  <tr>
+    <td headers="command">/thru</td>
+    <td headers="description" class="text">Move yourself through the wall in front of you.</td>
+    <td headers="notes">Useful for getting into boxes and other things without mining and rebuilding.</td>
+  </tr>
+</table>
+<p>Please see the <a href="http://wiki.sk89q.com/wiki/WorldEdit">WorldEdit Wiki</a> for more information on manipulating the clip board, etc.</p>
+<p class="lastline">Next we learn to make spaceships with <a href="movecraft.html">MoveCraft</a> -></p>
+</div>
+<footer>Copyright &copy; 2013<br>
+All screen shots were created with <a href="https://minecraft.net/">Minecraft</a> using the <a href="http://www.planetminecraft.com/texture_pack/misas-realistic-texture-pack/">Misa's Texture Pack</a>.
+</footer>
+</div>
+</body>
+</html>
